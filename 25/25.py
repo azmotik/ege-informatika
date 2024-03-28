@@ -23,7 +23,7 @@ for i in range(1, 10**7):
                 continue
         print(i)
 
-        
+# TODO: не получилось        
 #11814
 for i in range(1777, 10**10+1, 1777):
     if fnmatch(str(i), '21*68?79'):
