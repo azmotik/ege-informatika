@@ -75,7 +75,7 @@ max_len = 0
 for i in range(arr[-2][2] + 1, len(data)):
     max_len = max(max_len, data[i][1] - arr[-2][1])
 
-print(len(arr), max_len)'''
+print(len(arr), max_len)
 
 #26_05
 file = open('26var05.txt') 
@@ -91,7 +91,7 @@ print(len(arr), arr[-1])
 
 
 #TODO: на занятии решали
-'''
+
 # 26var079
 file = open('26var09.txt').readlines()
 N = int(file[0])
@@ -210,4 +210,229 @@ print(tuples)
 print(tuples_6)
 
 print(len(arr))
-'''
+
+# 26var10
+file = open('26var10.txt').readlines()
+N = int(file[0])
+tuples = []
+for i in range(1, N + 1):
+    arr = file[i].split(' ')
+    tuples.append((int(arr[0]), int(arr[1])))
+
+tuples = sorted(tuples, key=lambda item: (item[0], item[1]))
+
+result_arr = []
+for i in range(len(tuples)-1):
+    if int(tuples[i+1][1]) - int(tuples[i][1]) == 3:
+        result_arr.append(tuples[i+1])
+
+max_arr = min(result_arr, key=lambda t: t[0])
+
+rrr = filter(lambda item: item[0] == max_arr[0], result_arr)
+min_arr = max(rrr, key=lambda t: t[1])
+print(result_arr)
+print(max_arr[0], min_arr[1] - 1)
+
+# 26var11
+file = open('26var11.txt').readlines()
+N = int(file[0])
+tuples = []
+for i in range(1, N + 1):
+    arr = file[i].split(' ')
+    tuples.append((int(arr[0]), int(arr[1])))
+
+tuples = sorted(tuples, key=lambda item: (item[0], item[1]), reverse=True)
+
+result_arr = []
+for i in range(len(tuples)-1):
+    if int(tuples[i][1]) - int(tuples[i+1][1]) == 4:
+        result_arr.append(tuples[i+1])
+
+max_arr = max(result_arr, key=lambda t: t[0])
+
+rrr = filter(lambda item: item[0] == max_arr[0], result_arr)
+min_arr = min(rrr, key=lambda t: t[1])
+print(result_arr)
+print(max_arr[0], min_arr[1] + 2)
+
+# 26var12
+file = open('26var12.txt').readlines()
+N = int(file[0])
+tuples = []
+for i in range(1, N + 1):
+    arr = file[i].split(' ')
+    tuples.append((int(arr[0]), int(arr[1])))
+
+tuples = sorted(tuples, key=lambda item: (item[0], item[1]))
+
+result_arr = []
+for i in range(len(tuples)-1):
+    if int(tuples[i+1][1]) - int(tuples[i][1]) == 4:
+        result_arr.append(tuples[i+1])
+
+max_arr = min(result_arr, key=lambda t: t[0])
+
+rrr = filter(lambda item: item[0] == max_arr[0], result_arr)
+min_arr = max(rrr, key=lambda t: t[1])
+print(result_arr)
+print(max_arr[0], min_arr[1] - 1)
+
+#26_13
+file = open('26var13.txt').readlines()
+S = int((file[0].split(' '))[0])
+N = int((file[0].split(' '))[1])
+arr = []
+for i in range(1, N + 1):
+    arr.append(int(file[i]))
+
+arr = sorted(arr)
+arr1 = []
+for i in range(N):
+    if arr1 == [] or sum(arr1) + arr[i] <= S:
+        arr1.append(arr[i])
+print(len(arr1))
+arr1 = arr1[:-1]
+for j in range(N):
+    if sum(arr1) + arr[j] > S:
+        print(arr[j - 1])
+        break
+
+#26_14
+file = open('26var14.txt').readlines()
+S = int((file[0].split(' '))[0])
+N = int((file[0].split(' '))[1])
+arr = []
+for i in range(1, N + 1):
+    arr.append(int(file[i]))
+
+arr = sorted(arr)
+arr1 = []
+for i in range(N):
+    if arr1 == [] or sum(arr1) + arr[i] <= S:
+        arr1.append(arr[i])
+print(len(arr1))
+arr1 = arr1[:-1]
+for j in range(N):
+    if sum(arr1) + arr[j] > S:
+        print(arr[j - 1])
+        break
+
+#26_15
+file = open('26var15.txt').readlines()
+S = int((file[0].split(' '))[0])
+N = int((file[0].split(' '))[1])
+arr = []
+for i in range(1, N + 1):
+    arr.append(int(file[i]))
+
+arr = sorted(arr)
+arr1 = []
+for i in range(N):
+    if arr1 == [] or sum(arr1) + arr[i] <= S:
+        arr1.append(arr[i])
+print(len(arr1))
+arr1 = arr1[:-1]
+for j in range(N):
+    if sum(arr1) + arr[j] > S:
+        print(arr[j - 1])
+        break
+
+#26_16
+file = open('26var16.txt').readlines()
+S = int((file[0].split(' '))[0])
+N = int((file[0].split(' '))[1])
+arr = []
+for i in range(1, N + 1):
+    arr.append(int(file[i]))
+
+arr = sorted(arr)
+arr1 = []
+for i in range(N):
+    if arr1 == [] or sum(arr1) + arr[i] <= S:
+        arr1.append(arr[i])
+print(len(arr1))
+arr1 = arr1[:-1]
+for j in range(N):
+    if sum(arr1) + arr[j] > S:
+        print(arr[j - 1])
+        break
+
+#26_17
+file = open('26var17.txt').readlines()
+S = int((file[0].split(' '))[0])
+N = int((file[0].split(' '))[1])
+arr = []
+for i in range(1, N + 1):
+    arr.append(int(file[i]))
+
+arr = sorted(arr)
+arr1 = []
+for i in range(N):
+    if arr1 == [] or sum(arr1) + arr[i] <= S:
+        arr1.append(arr[i])
+print(len(arr1))
+arr1 = arr1[:-1]
+for j in range(N):
+    if sum(arr1) + arr[j] > S:
+        print(arr[j - 1])
+        break
+
+#26_18
+file = open('26var18.txt').readlines()
+S = int((file[0].split(' '))[0])
+N = int((file[0].split(' '))[1])
+arr = []
+for i in range(1, N + 1):
+    arr.append(int(file[i]))
+
+arr = sorted(arr)
+arr1 = []
+for i in range(N):
+    if arr1 == [] or sum(arr1) + arr[i] <= S:
+        arr1.append(arr[i])
+print(len(arr1))
+arr1 = arr1[:-1]
+for j in range(N):
+    if sum(arr1) + arr[j] > S:
+        print(arr[j - 1])
+        break
+
+#26_19
+file = open('26var19.txt').readlines()
+S = int((file[0].split(' '))[0])
+N = int((file[0].split(' '))[1])
+arr = []
+for i in range(1, N + 1):
+    arr.append(int(file[i]))
+
+arr = sorted(arr)
+arr1 = []
+for i in range(N):
+    if arr1 == [] or sum(arr1) + arr[i] <= S:
+        arr1.append(arr[i])
+print(len(arr1))
+arr1 = arr1[:-1]
+for j in range(N):
+    if sum(arr1) + arr[j] > S:
+        print(arr[j - 1])
+        break'''
+
+#26_20
+file = open('26var20.txt').readlines()
+S = int((file[0].split(' '))[0])
+N = int((file[0].split(' '))[1])
+arr = []
+for i in range(1, N + 1):
+    arr.append(int(file[i]))
+
+arr = sorted(arr)
+arr1 = []
+for i in range(N):
+    if arr1 == [] or sum(arr1) + arr[i] <= S:
+        arr1.append(arr[i])
+print(len(arr1))
+arr1 = arr1[:-1]
+for j in range(N):
+    if sum(arr1) + arr[j] > S:
+        print(arr[j - 1])
+        break
