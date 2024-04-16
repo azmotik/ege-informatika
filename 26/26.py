@@ -1,5 +1,5 @@
 #26_01
-'''file = open('26 вар1.txt')
+'''file = open('26/26 вар1.txt')
 data = []
 for line in file:
     start, duration = map(int, line.split())
@@ -18,7 +18,7 @@ for i in range(arr[-2][2] + 1, len(data)):
 print(len(arr), time)
 
 #26_02
-file = open('26 вар2.txt')
+file = open('26/26 вар2.txt')
 data = []
 for line in file:
     start, duration = map(int, line.split())
@@ -38,7 +38,7 @@ print(len(arr), time)
 
 #26_03
 
-file = open('26 вар3.txt')
+file = open('26/26 вар3.txt')
 data = []
 for line in file:
     left, duration = map(int, line.split()) 
@@ -58,7 +58,7 @@ for i in range(arr[-2][2] + 1, len(data)):
 print(len(arr), max_len)
 
 #26_04
-file = open('26 вар4.txt')
+file = open('26/26 вар4.txt')
 data = []   
 for line in file:
     left, duration = map(int, line.split()) 
@@ -78,7 +78,7 @@ for i in range(arr[-2][2] + 1, len(data)):
 print(len(arr), max_len)
 
 #26_05
-file = open('26var05.txt') 
+file = open('26/26var05.txt')
 n = int(file.readline())
 data = [int(line) for line in file] 
 data.sort(reverse=True)
@@ -93,7 +93,7 @@ print(len(arr), arr[-1])
 #TODO: на занятии решали
 
 # 26var079
-file = open('26var09.txt').readlines()
+file = open('26/26var09.txt').readlines()
 N = int(file[0])
 tuples = []
 for i in range(1, N + 1):
@@ -117,7 +117,7 @@ print(max_arr[0], min_arr[1] + 1)
 print(N)
 
 # 26var07
-file = open('26var07.txt').readlines()
+file = open('26/26var07.txt').readlines()
 
 n = int(file[0].split('\t')[0])
 m = int(file[0].split('\t')[1])
@@ -159,7 +159,7 @@ print(max_res, max_len)
 
 
 # 26var06
-file = open('26var06.txt').readlines()
+file = open('26/26var06.txt').readlines()
 arr = [int(x) for x in file]
 n = int(arr[0])
 arr = arr[1:]
@@ -181,7 +181,7 @@ print(max_res, max_len)
 print(arr)
 
 
-file = open('26.7_13397.txt').readlines()
+file = open('26/26.7_13397.txt').readlines()
 N = int(file[0])
 tuples = []
 for i in range(1, N + 1):
@@ -212,7 +212,7 @@ print(tuples_6)
 print(len(arr))
 
 # 26var10
-file = open('26var10.txt').readlines()
+file = open('26/26var10.txt').readlines()
 N = int(file[0])
 tuples = []
 for i in range(1, N + 1):
@@ -234,7 +234,7 @@ print(result_arr)
 print(max_arr[0], min_arr[1] - 1)
 
 # 26var11
-file = open('26var11.txt').readlines()
+file = open('26/26var11.txt').readlines()
 N = int(file[0])
 tuples = []
 for i in range(1, N + 1):
@@ -256,7 +256,7 @@ print(result_arr)
 print(max_arr[0], min_arr[1] + 2)
 
 # 26var12
-file = open('26var12.txt').readlines()
+file = open('26/26var12.txt').readlines()
 N = int(file[0])
 tuples = []
 for i in range(1, N + 1):
@@ -278,7 +278,7 @@ print(result_arr)
 print(max_arr[0], min_arr[1] - 1)
 
 #26_13
-file = open('26var13.txt').readlines()
+file = open('26/26var13.txt').readlines()
 S = int((file[0].split(' '))[0])
 N = int((file[0].split(' '))[1])
 arr = []
@@ -298,7 +298,7 @@ for j in range(N):
         break
 
 #26_14
-file = open('26var14.txt').readlines()
+file = open('26/26var14.txt').readlines()
 S = int((file[0].split(' '))[0])
 N = int((file[0].split(' '))[1])
 arr = []
@@ -318,7 +318,7 @@ for j in range(N):
         break
 
 #26_15
-file = open('26var15.txt').readlines()
+file = open('26/26var15.txt').readlines()
 S = int((file[0].split(' '))[0])
 N = int((file[0].split(' '))[1])
 arr = []
@@ -338,7 +338,7 @@ for j in range(N):
         break
 
 #26_16
-file = open('26var16.txt').readlines()
+file = open('26/26var16.txt').readlines()
 S = int((file[0].split(' '))[0])
 N = int((file[0].split(' '))[1])
 arr = []
@@ -358,7 +358,7 @@ for j in range(N):
         break
 
 #26_17
-file = open('26var17.txt').readlines()
+file = open('26/26var17.txt').readlines()
 S = int((file[0].split(' '))[0])
 N = int((file[0].split(' '))[1])
 arr = []
@@ -378,7 +378,7 @@ for j in range(N):
         break
 
 #26_18
-file = open('26var18.txt').readlines()
+file = open('26/26var18.txt').readlines()
 S = int((file[0].split(' '))[0])
 N = int((file[0].split(' '))[1])
 arr = []
@@ -398,7 +398,7 @@ for j in range(N):
         break
 
 #26_19
-file = open('26var19.txt').readlines()
+file = open('26/26var19.txt').readlines()
 S = int((file[0].split(' '))[0])
 N = int((file[0].split(' '))[1])
 arr = []
@@ -418,7 +418,7 @@ for j in range(N):
         break'''
 
 #26_20
-file = open('26var20.txt').readlines()
+file = open('26/26var20.txt').readlines()
 S = int((file[0].split(' '))[0])
 N = int((file[0].split(' '))[1])
 arr = []
