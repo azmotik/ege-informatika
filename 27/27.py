@@ -3,16 +3,22 @@ file = open('27v01_A.txt').readlines()
 K = int(file[0])
 N = int(file[1])
 
-min1 = 11000000000000000
-min2 = 11000000000000000
-min3 = 11000000000000000
+# минимальный элемент
+min_sum1 = 11000000000000000
+
+# минимальная сумма первого элемента со второмы элементом который входит в диапазоне от i + K минимального до K * 2 элемента
+min_sum2 = 11000000000000000
+
+# минимальная сумма трех элементов(сумма двух + 3 элемент) от K * 2 до конца файла
+min_sum3 = 11000000000000000
 
 for i in range(2, N + 2 - (K * 2)):
-    min1 = min(min1, int(file[i]))
-    min2 = min(min2, min1 + int(file[i + K]))
-    min3 = min(min3, min2 + int(file[i + K * 2]))
+    min_sum1 = min(min_sum1, int(file[i]))
+    min_sum2 = min(min_sum2, min_sum1 + int(file[i + K]))
+    min_sum3 = min(min_sum3, min_sum2 + int(file[i + K * 2]))
 
-print(min3)
+print(min_sum3)
+
 
 
 # 27_17a
