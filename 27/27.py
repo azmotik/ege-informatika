@@ -1,5 +1,5 @@
 # 27_1
-file = open('27v01_A.txt').readlines()
+'''file = open('27/27v01_A.txt').readlines()
 K = int(file[0])
 N = int(file[1])
 
@@ -17,12 +17,120 @@ for i in range(2, N + 2 - (K * 2)):
     min_sum2 = min(min_sum2, min_sum1 + int(file[i + K]))
     min_sum3 = min(min_sum3, min_sum2 + int(file[i + K * 2]))
 
+print(min_sum3)'''
+
+# 27_2a
+file = open('27/27v02_A.txt').readlines()
+K = int(file[0])
+N = int(file[1])
+
+max_sum1 = 0
+
+max_sum2 = 0
+
+max_sum3 = 0
+
+for i in range(2, N + 2 - (K * 2)):
+    max_sum1 = max(max_sum1, int(file[i]))
+    max_sum2 = max(max_sum2, max_sum1 + int(file[i + K]))
+    max_sum3 = max(max_sum3, max_sum2 + int(file[i + K * 2]))
+
+print(max_sum3)
+
+# 27_2b
+file = open('27/27v02_B.txt').readlines()
+K = int(file[0])
+N = int(file[1])
+
+max_sum1 = 0
+
+max_sum2 = 0
+
+max_sum3 = 0
+
+for i in range(2, N + 2 - (K * 2)):
+    max_sum1 = max(max_sum1, int(file[i]))
+    max_sum2 = max(max_sum2, max_sum1 + int(file[i + K]))
+    max_sum3 = max(max_sum3, max_sum2 + int(file[i + K * 2]))
+
+print(max_sum3)
+
+# 27_3a
+file = open('27/27v03_A.txt').readlines()
+K = int(file[0])
+N = int(file[1])
+
+min_sum1 = 11000000000000000
+
+min_sum2 = 11000000000000000
+
+min_sum3 = 11000000000000000
+
+for i in range(2, N + 2 - (K * 2)):
+    min_sum1 = min(min_sum1, int(file[i]))
+    min_sum2 = min(min_sum2, min_sum1 * int(file[i + K]))
+    min_sum3 = min(min_sum3, min_sum2 * int(file[i + K * 2]))
+
 print(min_sum3)
+
+# 27_3b
+file = open('27/27v03_B.txt').readlines()
+K = int(file[0])
+N = int(file[1])
+
+min_sum1 = 11000000000000000
+
+min_sum2 = 11000000000000000
+
+min_sum3 = 11000000000000000
+
+for i in range(2, N + 2 - (K * 2)):
+    min_sum1 = min(min_sum1, int(file[i]))
+    min_sum2 = min(min_sum2, min_sum1 * int(file[i + K]))
+    min_sum3 = min(min_sum3, min_sum2 * int(file[i + K * 2]))
+
+print(min_sum3)
+
+# 27_4a
+file = open('27/27v04_A.txt').readlines()
+K = int(file[0])
+N = int(file[1])
+
+max_sum1 = 0
+
+max_sum2 = 0
+
+max_sum3 = 0
+
+for i in range(2, N + 2 - (K * 2)):
+    max_sum1 = max(max_sum1, int(file[i]))
+    max_sum2 = max(max_sum2, max_sum1 * int(file[i + K]))
+    max_sum3 = max(max_sum3, max_sum2 * int(file[i + K * 2]))
+
+print(max_sum3)
+
+# 27_4b
+file = open('27/27v04_B.txt').readlines()
+K = int(file[0])
+N = int(file[1])
+
+max_sum1 = 0
+
+max_sum2 = 0
+
+max_sum3 = 0
+
+for i in range(2, N + 2 - (K * 2)):
+    max_sum1 = max(max_sum1, int(file[i]))
+    max_sum2 = max(max_sum2, max_sum1 * int(file[i + K]))
+    max_sum3 = max(max_sum3, max_sum2 * int(file[i + K * 2]))
+
+print(max_sum3)
 
 
 
 # 27_17a
-file = open('27/27v17_A.txt').readlines()
+'''file = open('27/27v17_A.txt').readlines()
 N = int(file[0])
 arr = []
 
@@ -34,7 +142,7 @@ for i in range(1, N + 1):
 print(sum(arr), sum(arr) % 39 != 0)
 
 # 27_17a_b
-file = open('27v17_B.txt').readlines()
+file = open('27/27v17_B.txt').readlines()
 N = int(file[0])
 arr = []
 
@@ -62,6 +170,6 @@ for j in range(1, N + 1):
             break
     else:
         print(arr_sum, arr_sum % 39 == 0)
-        break
+        break'''
 
 
