@@ -1,58 +1,117 @@
 from ipaddress import *
-'''count = 0
-arr = ip_network('23.140.159.160/255.255.252.0', 0)
-for ip in arr:
-    if bin(int(ip))[:-16].count('1') >= bin(int(ip))[-16:].count('1'):
-        count +=1 
-print(count)
 
-count = 0
-arr = ip_network('253.112.169.12/255.255.254.0', 0)
-for ip in arr:
-    if bin(int(ip))[:-16].count('1') <= bin(int(ip))[-16:].count('1'):
-        count +=1 
-print(count)
-
-count = 0
-arr = ip_network('252.67.33.87/255.252.0.0', 0)
-for ip in arr:
-    if bin(int(ip))[:-16].count('1') * 2 < bin(int(ip))[-16:].count('1'):
-        count +=1 
-print(count)
-
-count = 0
-arr = ip_network('249.0.33.87/255.252.0.0', 0)
-for ip in arr:
-    if bin(int(ip))[:-16].count('1') * 2 < bin(int(ip))[-16:].count('1'):
-        count +=1 
-print(count)
-
-for mask in range(0, 33):
-    net = ip_network(f'44.44.229.28/{mask}', 0)
-    if net[0] == ip_address('44.44.224.0'):
+'''for mask in range(32, 0, -1):
+    net1 = ip_network(f'216.54.187.235/{mask}', 0)
+    net2 = ip_network(f'216.54.174.128/{mask}', 0)
+    if net1[0] != net2[0] and ip_address('216.54.174.128') != net2[0] and ip_address('216.54.174.128') != net2[-1] and ip_address('216.54.187.235') != net1[0] and ip_address('216.54.187.235') != net1[-1]:
         print(mask)
 
-for mask in range(0, 33):
-    net = ip_network(f'244.55.229.28/{mask}', 0)
-    if net[0] == ip_address('244.0.0.0'):
-        print(32 - mask)
+max_a = 1
 
-for mask in range(0, 33):
-    net = ip_network(f'244.55.138.100/{mask}', 0)
-    if net[0] == ip_address('244.55.138.96'):
-        print(net.netmask)
+for a in range(1, 255):
+    net = ip_network(f'116.242.{a}.26/255.255.255.224', 0)
+    flag = 1
+    for ip in net:
+        if bin(int(ip))[:-16].count('1') < bin(int(ip))[-16:].count('1'):
+            flag = 0
 
-for mask in range(0, 33):
-    net = ip_network(f'244.55.138.100/{mask}', 0)
-    if net[0] == ip_address('240.0.0.0'):
-        print(net.netmask)
+    if flag == 1:
+        max_a = max(max_a, a)
 
-for mask in range(0, 33):
-    net = ip_network(f'42.118.219.133/{mask}', 0)
-    if net[0] == ip_address('42.118.216.0'):
-        print(bin(int(net.netmask)).count('1'))'''
+print(max_a)
 
-for mask in range(0, 33):
-    net = ip_network(f'98.188.115.211/{mask}', 0)
-    if net[0] == ip_address('98.188.115.192'):
-        print(bin(int(net.netmask)).count('1')) 
+min_a = 255
+
+for a in range(1, 255):
+    net = ip_network(f'183.192.{a}.0/255.255.252.0', 0)
+    flag = 1
+    for ip in net:
+        if bin(int(ip))[-16:].count('1') <= 3:
+            flag = 0
+
+    if flag == 1:
+        min_a = min(min_a, a)
+
+print(min_a)
+
+#неправильно
+count = 0
+for a in range(1, 255):
+    net = ip_network(f'246.81.65.{a}/255.255.255.224', 0)
+    flag = 1
+    for ip in net:
+        if bin(int(ip))[-16:-8].count('0') <= bin(int(ip))[-8:].count('0'):
+            flag = 0
+
+    if flag == 1:
+        count += 1
+
+print(count)
+
+count = 0
+
+net = ip_network(f'112.154.132.0/255.255.252.0', 0)
+flag = 1
+for ip in net:
+    if bin(int(ip))[-16:].count('1') % 2 != 0 and bin(int(ip))[:-16].count('1') <= bin(int(ip))[-16:].count('0'):
+        count += 1
+
+print(count)
+
+#неправильно
+count = 0
+for a in range(1, 255):
+    net = ip_network(f'207.0.{a}.167/255.255.255.192', 0)
+    flag = 1
+    for ip in net:
+        if bin(int(ip))[:-16].count('0') <= bin(int(ip))[-16:].count('0'):
+            flag = 0
+
+    if flag == 1:
+        count += 1
+
+print(count)
+
+max_ip = 0
+
+net = ip_network(f'192.168.31.80/255.255.255.240', 0)
+for ip in net:
+    max_ip = max(bin(int(ip)).count('1'), max_ip)
+
+print(max_ip)
+
+count = 0
+
+net = ip_network(f'192.168.32.160/255.255.255.240', 0)
+for ip in net:
+    if bin(int(ip))[2:].count('0') > 21:
+        count += 1
+
+print(count)
+
+count = 0
+
+net = ip_network(f'192.168.240.0/255.255.255.0', 0)
+for ip in net:
+    if bin(int(ip))[2:].count('0') == bin(int(ip))[2:].count('1'):
+        count += 1
+
+print(count)
+
+count = 0
+
+net = ip_network(f'112.208.0.0/255.255.128.0', 0)
+for ip in net:
+    if bin(int(ip))[2:].count('1') % 11 == 0:
+        count += 1
+
+print(count)'''
+
+count = 0
+
+net = ip_network(f'192.168.32.160/255.255.255.240', 0)
+for ip in net:
+    if bin(int(ip))[2:].count('1') % 2 == 0:
+        count += 1
+
+print(count)
